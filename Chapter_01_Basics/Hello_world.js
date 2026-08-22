@@ -1,3 +1,3 @@
-console.log('Hello World')
+console.log('Hello World');
 
-console.log('Welcome Abord! 3x Ai Tester')
+console.log('Welcome Abord! 3x Ai Tester');
