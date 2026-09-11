@@ -54,4 +54,7 @@ Use this structure when adding a new note (see `Source_code_Byte_code_Binary_IQ.
 
 | File | Topic |
 |---|---|
+| [01_Indentifier_rules.md](01_Indentifier_rules.md) | JavaScript Identifier Rules — Complete Reference |
 | [Source_code_Byte_code_Binary_IQ.md](Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
+| [02_keyword.md](02_keyword.md) | JavaScript Keywords — Complete Reference |
+| [03_commands_notes.md](03_commands_notes.md) | VS Code Commands & Shortcuts — Complete Reference (Windows) |
