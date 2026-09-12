@@ -58,4 +58,5 @@ Use this structure when adding a new note (see `Source_code_Byte_code_Binary_IQ.
 | [Source_code_Byte_code_Binary_IQ.md](Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 | [02_keyword.md](02_keyword.md) | JavaScript Keywords — Complete Reference |
 | [03_commands_notes.md](03_commands_notes.md) | VS Code Commands & Shortcuts — Complete Reference (Windows) |
+| [04_Literals_notes.md](04_Literals_notes.md) | JavaScript Literals — Complete Reference (Null vs Undefined, Data Types) |
 | [05_Operaters_notes.md](05_Operaters_notes.md) | JavaScript Operators — Complete Reference (Assignment, Arithmetic, Comparison, Logical) |

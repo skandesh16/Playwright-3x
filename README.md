@@ -41,6 +41,7 @@ Quick-reference notes with tables, examples, and diagrams — perfect for revisi
 | [01_Indentifier_rules.md](IQ_Notes/01_Indentifier_rules.md) | JavaScript Identifier Rules — Complete Reference |
 | [02_keyword_notes.md](IQ_Notes/02_keyword_notes.md) | JavaScript Keywords — Complete Reference |
 | [03_commands_notes.md](IQ_Notes/03_commands_notes.md) | VS Code Commands & Shortcuts (Windows) |
+| [04_Literals_notes.md](IQ_Notes/04_Literals_notes.md) | JavaScript Literals — Null vs Undefined, Data Types |
 | [05_Operaters_notes.md](IQ_Notes/05_Operaters_notes.md) | JavaScript Operators — Complete Reference |
 | [Source_code_Byte_code_Binary_IQ.md](IQ_Notes/Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 
