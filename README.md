@@ -28,7 +28,7 @@ Playwright_3x/
 | 02 | **JavaScript Concepts** | Core JS concepts and fundamentals |
 | 03 | **Identifiers** | Identifier rules, valid/invalid names, naming conventions (camelCase, PascalCase, etc.) |
 | 04 | **Literals** | String, Number, Boolean, Array, Object literals |
-| 05 | **Operators** | Assignment (`=`, `+=`), Arithmetic (`+`, `-`, `%`, `**`), Comparison (`==` vs `===`), Logical (`&&`, `\|\|`, `!`) |
+| 05 | **Operators** | Assignment (`=`, `+=`), Arithmetic (`+`, `-`, `%`, `**`), Comparison (`==` vs `===`), Logical (`&&`, `\|\|`, `!`), String (`+`, template literals), Ternary (`? :`), Nested Ternary, `typeof` operator, IQ practice questions |
 
 ---
 
