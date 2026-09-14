@@ -12,7 +12,8 @@ Playwright_3x/
 ├── Chapter_02_JavaScripts_Concept/ # Core JS concepts & fundamentals
 ├── Chapter_03_Identifiers/         # Identifier rules, naming conventions
 ├── Chapter_04_Literal/             # Literals in JavaScript
-├── Chapter_05_Operators/           # Operators — Assignment, Arithmetic, Comparison, Logical
+├── Chapter_05_Operators/           # Operators — Assignment, Arithmetic, Comparison, Logical, Increment/Decrement, Null Coalescing
+├── Chapter_06_Statements/          # Statements — if/else, nested conditions, multiple conditions
 ├── ChearSheet/                     # Quick-reference cheat sheets
 ├── Interview_concepts/             # Interview preparation material
 └── IQ_Notes/                       # Detailed concept notes (markdown)
@@ -28,7 +29,8 @@ Playwright_3x/
 | 02 | **JavaScript Concepts** | Core JS concepts and fundamentals |
 | 03 | **Identifiers** | Identifier rules, valid/invalid names, naming conventions (camelCase, PascalCase, etc.) |
 | 04 | **Literals** | String, Number, Boolean, Array, Object literals |
-| 05 | **Operators** | Assignment (`=`, `+=`), Arithmetic (`+`, `-`, `%`, `**`), Comparison (`==` vs `===`), Logical (`&&`, `\|\|`, `!`), String (`+`, template literals), Ternary (`? :`), Nested Ternary, `typeof` operator, IQ practice questions |
+| 05 | **Operators** | Assignment (`=`, `+=`), Arithmetic (`+`, `-`, `%`, `**`), Comparison (`==` vs `===`), Logical (`&&`, `\|\|`, `!`), String (`+`, template literals), Ternary (`? :`), Nested Ternary, `typeof` operator, Increment/Decrement (`++`, `--`), Null Coalescing (`??`), IQ practice questions |
+| 06 | **Statements** | `if/else` conditionals, nested `if/else`, multiple conditions |
 
 ---
 
