@@ -1,0 +1,31 @@
+// Switch
+//0-Sun 1-Mon, 2-Tue, 3-Wed, 4-Thu, 5-Fri, 6-Sat
+
+let day = 11;
+
+switch(day) {
+    case 0:
+        console.log("Sunday - Rest Day");
+        break;
+    case 1:
+        console.log("Monday - Sprint Planning");
+        break;
+    case 2:
+        console.log("Tuesday - Devlopment");
+        break;
+    case 3:
+        console.log("Wednesday - Code Review");
+        break;
+    case 4:
+        console.log("Thursday - Testing");
+        break;
+    case 5:
+        console.log("Friday - Deployment & Retro");
+        break;
+    case 6:
+        console.log("Saturday - Learning & Projects");
+        break;
+    default:
+        console.log("Invalid day");
+        break;
+}

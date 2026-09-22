@@ -14,6 +14,8 @@ Playwright_3x/
 ├── Chapter_04_Literal/             # Literals in JavaScript
 ├── Chapter_05_Operators/           # Operators — Assignment, Arithmetic, Comparison, Logical, Increment/Decrement, Null Coalescing
 ├── Chapter_06_Statements/          # Statements — if/else, nested conditions, multiple conditions
+├── Chapter_07_SwitchStatements/    # Switch statements, grouping, API testing with switch
+├── Chapter_08_Userinputs/          # Reading user input in Node.js
 ├── ChearSheet/                     # Quick-reference cheat sheets
 ├── Interview_concepts/             # Interview preparation material
 └── IQ_Notes/                       # Detailed concept notes (markdown)
@@ -31,6 +33,8 @@ Playwright_3x/
 | 04 | **Literals** | String, Number, Boolean, Array, Object literals |
 | 05 | **Operators** | Assignment (`=`, `+=`), Arithmetic (`+`, `-`, `%`, `**`), Comparison (`==` vs `===`), Logical (`&&`, `\|\|`, `!`), String (`+`, template literals), Ternary (`? :`), Nested Ternary, `typeof` operator, Increment/Decrement (`++`, `--`), Null Coalescing (`??`), IQ practice questions |
 | 06 | **Statements** | `if/else` conditionals, nested `if/else`, multiple conditions |
+| 07 | **Switch Statements** | `switch/case`, grouped cases, API testing with switch, IQ practice questions |
+| 08 | **User Inputs** | Reading user input from stdin using `readFileSync`, `trim()`, EOF signals |
 
 ---
 
@@ -45,6 +49,8 @@ Quick-reference notes with tables, examples, and diagrams — perfect for revisi
 | [03_commands_notes.md](IQ_Notes/03_commands_notes.md) | VS Code Commands & Shortcuts (Windows) |
 | [04_Literals_notes.md](IQ_Notes/04_Literals_notes.md) | JavaScript Literals — Null vs Undefined, Data Types |
 | [05_Operaters_notes.md](IQ_Notes/05_Operaters_notes.md) | JavaScript Operators — Complete Reference |
+| [06_Statements_notes.md](IQ_Notes/06_Statements_notes.md) | JavaScript Statements — if/else, Nested Conditions, Truthy/Falsy |
+| [07_Userinputs_notes.md](IQ_Notes/07_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
 | [Source_code_Byte_code_Binary_IQ.md](IQ_Notes/Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 
 ---
