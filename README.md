@@ -16,6 +16,7 @@ Playwright_3x/
 ├── Chapter_06_Statements/          # Statements — if/else, nested conditions, multiple conditions
 ├── Chapter_07_SwitchStatements/    # Switch statements, grouping, API testing with switch
 ├── Chapter_08_Userinputs/          # Reading user input in Node.js
+├── Chapter_09_Loops/               # Loops — for, while, do-while, edge cases
 ├── ChearSheet/                     # Quick-reference cheat sheets
 ├── Interview_concepts/             # Interview preparation material
 └── IQ_Notes/                       # Detailed concept notes (markdown)
@@ -35,6 +36,7 @@ Playwright_3x/
 | 06 | **Statements** | `if/else` conditionals, nested `if/else`, multiple conditions |
 | 07 | **Switch Statements** | `switch/case`, grouped cases, API testing with switch, IQ practice questions |
 | 08 | **User Inputs** | Reading user input from stdin using `readFileSync`, `trim()`, EOF signals |
+| 09 | **Loops** | `for` loop (ICU pattern), `while` loop, `do-while` loop, pre/post increment, `break`, infinite loops, NaN edge cases, accumulator pattern |
 
 ---
 
@@ -51,6 +53,7 @@ Quick-reference notes with tables, examples, and diagrams — perfect for revisi
 | [05_Operaters_notes.md](IQ_Notes/05_Operaters_notes.md) | JavaScript Operators — Complete Reference |
 | [06_Statements_notes.md](IQ_Notes/06_Statements_notes.md) | JavaScript Statements — if/else, Nested Conditions, Truthy/Falsy |
 | [07_Userinputs_notes.md](IQ_Notes/07_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
+| [09_Loops_notes.md](IQ_Notes/09_Loops_notes.md) | JavaScript Loops — for, while, do-while, edge cases, interview questions |
 | [Source_code_Byte_code_Binary_IQ.md](IQ_Notes/Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 
 ---
