@@ -15,3 +15,4 @@ while (n < NaN){
     n++
 }
 console.log(n);
+
