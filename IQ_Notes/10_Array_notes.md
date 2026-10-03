@@ -370,19 +370,421 @@ console.log(arr);    // [10, "A", "B", 40, 50]
 
 ---
 
-## 8. Other Useful Array Methods
+## 8. Array Functions — Complete Reference
 
-| Method | Description | Mutates? | Example |
+### 📋 Quick Overview — All Methods at a Glance
+
+| Method | What It Does | Mutates? | Returns |
 |---|---|---|---|
-| `concat()` | Merge two or more arrays | ❌ No | `[1,2].concat([3,4])` → `[1,2,3,4]` |
-| `slice()` | Extract a section (start, end) | ❌ No | `[1,2,3,4].slice(1,3)` → `[2,3]` |
-| `indexOf()` | Find first index of a value | ❌ No | `[10,20,30].indexOf(20)` → `1` |
-| `includes()` | Check if value exists | ❌ No | `[1,2,3].includes(2)` → `true` |
-| `reverse()` | Reverse the array | ✅ Yes | `[1,2,3].reverse()` → `[3,2,1]` |
-| `sort()` | Sort the array | ✅ Yes | `[3,1,2].sort()` → `[1,2,3]` |
-| `join()` | Join elements into a string | ❌ No | `['a','b','c'].join('-')` → `"a-b-c"` |
-| `flat()` | Flatten nested arrays | ❌ No | `[1,[2,[3]]].flat(Infinity)` → `[1,2,3]` |
-| `fill()` | Fill with a static value | ✅ Yes | `[1,2,3].fill(0)` → `[0,0,0]` |
+| `push()` | Add to end | ✅ | New length |
+| `pop()` | Remove from end | ✅ | Removed element |
+| `unshift()` | Add to start | ✅ | New length |
+| `shift()` | Remove from start | ✅ | Removed element |
+| `splice()` | Add/Remove/Replace anywhere | ✅ | Removed elements array |
+| `slice()` | Extract a portion | ❌ | New sub-array |
+| `concat()` | Merge arrays | ❌ | New merged array |
+| `indexOf()` | First index of value | ❌ | Index or `-1` |
+| `lastIndexOf()` | Last index of value | ❌ | Index or `-1` |
+| `includes()` | Check if value exists | ❌ | `true` / `false` |
+| `find()` | First element matching condition | ❌ | Element or `undefined` |
+| `findIndex()` | First index matching condition | ❌ | Index or `-1` |
+| `filter()` | All elements matching condition | ❌ | New filtered array |
+| `map()` | Transform each element | ❌ | New transformed array |
+| `reduce()` | Reduce to single value | ❌ | Accumulated value |
+| `forEach()` | Execute function per element | ❌ | `undefined` |
+| `every()` | Check if ALL match condition | ❌ | `true` / `false` |
+| `some()` | Check if ANY matches condition | ❌ | `true` / `false` |
+| `sort()` | Sort elements | ✅ | Sorted array (same ref) |
+| `reverse()` | Reverse order | ✅ | Reversed array (same ref) |
+| `join()` | Join into string | ❌ | String |
+| `flat()` | Flatten nested arrays | ❌ | New flat array |
+| `fill()` | Fill with static value | ✅ | Modified array |
+| `toString()` | Convert to comma string | ❌ | String |
+| `Array.isArray()` | Check if value is array | ❌ | `true` / `false` |
+| `Array.from()` | Create from iterable | ❌ | New array |
+| `Array.of()` | Create from arguments | ❌ | New array |
+
+---
+
+### 🔍 8.1 Searching Methods
+
+#### `indexOf()` — Find First Occurrence
+
+Returns the **first index** where the value is found, or `-1` if not found.
+
+```js
+let results = ["Pass", "Fail", "Skip", "Error", "Done", "Fail", "Pending"];
+
+console.log(results.indexOf("Pass"));    // 0  (found at index 0)
+console.log(results.indexOf("Fail"));    // 1  (first "Fail" is at index 1)
+console.log(results.indexOf("NotHere")); // -1 (not found)
+```
+
+#### `lastIndexOf()` — Find Last Occurrence
+
+Returns the **last index** where the value is found, or `-1` if not found.
+
+```js
+let results = ["Pass", "Fail", "Skip", "Error", "Done", "Fail", "Pending"];
+
+console.log(results.lastIndexOf("Fail"));    // 5  (last "Fail" is at index 5)
+console.log(results.lastIndexOf("Pass"));    // 0  (only one — same as indexOf)
+```
+
+```
+indexOf vs lastIndexOf:
+        0       1       2       3       4       5       6
+     ┌──────┬──────┬──────┬──────┬──────┬──────┬─────────┐
+     │ Pass │ Fail │ Skip │Error │ Done │ Fail │ Pending │
+     └──────┴──────┴──────┴──────┴──────┴──────┴─────────┘
+              ↑                            ↑
+         indexOf("Fail") = 1      lastIndexOf("Fail") = 5
+```
+
+#### `includes()` — Does It Exist?
+
+Returns `true` if the value is found, `false` otherwise. Simpler than `indexOf` when you just need a yes/no answer.
+
+```js
+let results = ["Pass", "Fail", "Skip", "Error", "Done", "Fail", "Pending"];
+
+console.log(results.includes("Error"));    // true
+console.log(results.includes("Timeout"));  // false
+```
+
+> 💡 `includes()` uses **strict equality** (`===`), so `[1,2,3].includes("1")` returns `false`.
+
+#### `find()` — First Element Matching a Condition
+
+Returns the **first element** that satisfies the callback function, or `undefined` if none found.
+
+```js
+let nums = [10, 20, 30, 40, 50];
+
+let result = nums.find(x => x > 20);
+console.log(result);   // 30  (first element > 20)
+
+let notFound = nums.find(x => x > 100);
+console.log(notFound); // undefined
+```
+
+#### `findIndex()` — First Index Matching a Condition
+
+Like `find()`, but returns the **index** instead of the element.
+
+```js
+let nums = [10, 20, 30, 40, 50];
+
+console.log(nums.findIndex(x => x > 20));   // 2  (index of 30)
+console.log(nums.findIndex(x => x > 100));  // -1 (not found)
+```
+
+#### Searching Methods — Quick Comparison
+
+| Method | Searches by | Returns | Use When |
+|---|---|---|---|
+| `indexOf(value)` | Exact value | First index or `-1` | Need position of a known value |
+| `lastIndexOf(value)` | Exact value | Last index or `-1` | Need last position of a duplicate value |
+| `includes(value)` | Exact value | `true` / `false` | Just checking existence |
+| `find(callback)` | Condition | First matching element or `undefined` | Need the element itself (with logic) |
+| `findIndex(callback)` | Condition | First matching index or `-1` | Need the index (with logic) |
+
+---
+
+### 🔄 8.2 Transformation Methods
+
+These methods create **new arrays** without modifying the original.
+
+#### `map()` — Transform Every Element
+
+Creates a new array by applying a function to **every element**.
+
+```js
+let nums = [1, 2, 3, 4, 5];
+
+let doubled = nums.map(x => x * 2);
+console.log(doubled);  // [2, 4, 6, 8, 10]
+console.log(nums);     // [1, 2, 3, 4, 5]  ← unchanged!
+
+let labels = nums.map(x => `Item ${x}`);
+console.log(labels);   // ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+```
+
+```
+map() Visualization:
+Original:  [1,    2,    3,    4,    5]
+                ↓     ↓     ↓     ↓     ↓       x => x * 2
+New:       [2,    4,    6,    8,   10]
+```
+
+#### `filter()` — Keep Elements That Match a Condition
+
+Creates a new array with **only the elements** that pass the test.
+
+```js
+let nums = [10, 25, 30, 45, 50, 15];
+
+let bigNums = nums.filter(x => x > 20);
+console.log(bigNums);  // [25, 30, 45, 50]
+
+let evens = nums.filter(x => x % 2 === 0);
+console.log(evens);    // [10, 30, 50]
+```
+
+```
+filter() Visualization:
+Original:  [10,   25,   30,   45,   50,   15]
+Test:       ❌    ✅    ✅    ✅    ✅    ❌     x => x > 20
+New:       [25,   30,   45,   50]
+```
+
+#### `reduce()` — Reduce to a Single Value
+
+Applies a function against an **accumulator** and each element to reduce the array to one value.
+
+```js
+// Syntax: arr.reduce((accumulator, currentValue) => { ... }, initialValue)
+
+let nums = [10, 20, 30, 40, 50];
+
+let sum = nums.reduce((acc, curr) => acc + curr, 0);
+console.log(sum);   // 150
+
+let max = nums.reduce((acc, curr) => curr > acc ? curr : acc, nums[0]);
+console.log(max);   // 50
+```
+
+| Step | `acc` | `curr` | `acc + curr` |
+|---|---|---|---|
+| 1st | 0 | 10 | **10** |
+| 2nd | 10 | 20 | **30** |
+| 3rd | 30 | 30 | **60** |
+| 4th | 60 | 40 | **100** |
+| 5th | 100 | 50 | **150** |
+
+#### `flat()` — Flatten Nested Arrays
+
+```js
+let nested = [1, [2, 3], [4, [5, 6]]];
+
+console.log(nested.flat());           // [1, 2, 3, 4, [5, 6]]   (depth 1)
+console.log(nested.flat(2));          // [1, 2, 3, 4, 5, 6]     (depth 2)
+console.log(nested.flat(Infinity));   // [1, 2, 3, 4, 5, 6]     (all levels)
+```
+
+#### `flatMap()` — Map + Flatten (Depth 1)
+
+```js
+let sentences = ["Hello World", "Good Morning"];
+
+let words = sentences.flatMap(s => s.split(" "));
+console.log(words);   // ["Hello", "World", "Good", "Morning"]
+```
+
+#### Transformation Methods — Quick Comparison
+
+| Method | Purpose | Returns | Common Use |
+|---|---|---|---|
+| `map(fn)` | Transform each element | New array (same length) | Double values, format strings |
+| `filter(fn)` | Keep matching elements | New array (≤ original length) | Remove unwanted items |
+| `reduce(fn, init)` | Accumulate to single value | Any single value | Sum, max, count, grouping |
+| `flat(depth)` | Flatten nested arrays | New flat array | Remove nesting |
+| `flatMap(fn)` | Map + flat(1) | New array | Split + flatten in one step |
+
+---
+
+### 🔁 8.3 Iteration Methods
+
+#### `forEach()` — Execute Function for Each Element
+
+Runs a function on each element. **Cannot break out** — always iterates the entire array.
+
+```js
+let browsers = ["Chrome", "Edge", "Safari", "Brave"];
+
+browsers.forEach((browser, index) => {
+    console.log(`${index}: ${browser}`);
+});
+// 0: Chrome
+// 1: Edge
+// 2: Safari
+// 3: Brave
+```
+
+> ⚠️ `forEach` returns `undefined` — you cannot chain it or collect results. Use `map()` if you need a new array.
+
+#### `every()` — Do ALL Elements Pass?
+
+Returns `true` if **every** element passes the test, `false` otherwise. Short-circuits on first failure.
+
+```js
+let scores = [80, 90, 75, 95];
+
+console.log(scores.every(s => s >= 50));   // true  (all ≥ 50)
+console.log(scores.every(s => s >= 80));   // false (75 fails)
+```
+
+#### `some()` — Does ANY Element Pass?
+
+Returns `true` if **at least one** element passes the test. Short-circuits on first success.
+
+```js
+let scores = [40, 30, 80, 20];
+
+console.log(scores.some(s => s >= 50));    // true  (80 passes)
+console.log(scores.some(s => s >= 90));    // false (none passes)
+```
+
+#### `every()` vs `some()` — Quick Comparison
+
+| Method | Question | Returns `true` when | Short-circuits on |
+|---|---|---|---|
+| `every(fn)` | Do **ALL** pass? | Every element passes | First **failure** ❌ |
+| `some(fn)` | Does **ANY** pass? | At least one passes | First **success** ✅ |
+
+```
+every():  [✅, ✅, ✅, ✅]  → true       [✅, ✅, ❌, ✅]  → false (stops at ❌)
+some():   [❌, ❌, ✅, ❌]  → true       [❌, ❌, ❌, ❌]  → false
+```
+
+---
+
+### 📊 8.4 Sorting Methods
+
+#### `sort()` — Sort the Array (Mutates! ⚠️)
+
+Sorts elements **in place**. By default, sorts as **strings** (alphabetical/lexicographic).
+
+```js
+// String sort (default) — works great for strings
+let fruits = ["Banana", "Apple", "Cherry"];
+fruits.sort();
+console.log(fruits);   // ["Apple", "Banana", "Cherry"] ✅
+
+// ⚠️ Number sort GOTCHA — default sort treats numbers as strings!
+let nums = [10, 5, 40, 25, 100];
+nums.sort();
+console.log(nums);     // [10, 100, 25, 40, 5]  ❌ Wrong! (sorted as strings)
+```
+
+> ⚠️ **Critical Gotcha:** `sort()` converts elements to strings by default! `"100"` comes before `"25"` because `"1" < "2"` alphabetically.
+
+#### Sorting Numbers Correctly — Use a Compare Function
+
+```js
+let nums = [10, 5, 40, 25, 100];
+
+// Ascending order (a - b)
+nums.sort((a, b) => a - b);
+console.log(nums);     // [5, 10, 25, 40, 100] ✅
+
+// Descending order (b - a)
+nums.sort((a, b) => b - a);
+console.log(nums);     // [100, 40, 25, 10, 5] ✅
+```
+
+| Compare Function | Rule | Order |
+|---|---|---|
+| `(a, b) => a - b` | Negative → `a` first | **Ascending** (small → big) |
+| `(a, b) => b - a` | Negative → `b` first | **Descending** (big → small) |
+
+#### `reverse()` — Reverse the Array (Mutates! ⚠️)
+
+```js
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+console.log(arr);     // [5, 4, 3, 2, 1]
+```
+
+#### `toSorted()` and `toReversed()` — Non-Mutating Versions (ES2023)
+
+```js
+let arr = [3, 1, 2];
+
+let sorted = arr.toSorted((a, b) => a - b);
+console.log(sorted);   // [1, 2, 3]  ← new array
+console.log(arr);      // [3, 1, 2]  ← unchanged!
+
+let reversed = arr.toReversed();
+console.log(reversed); // [2, 1, 3]  ← new array
+console.log(arr);      // [3, 1, 2]  ← unchanged!
+```
+
+---
+
+### 🔗 8.5 Joining & Splitting
+
+#### `join()` — Array → String
+
+```js
+let arr = ["Playwright", "Cypress", "Selenium"];
+
+console.log(arr.join());        // "Playwright,Cypress,Selenium"  (default: comma)
+console.log(arr.join(" | "));   // "Playwright | Cypress | Selenium"
+console.log(arr.join("-"));     // "Playwright-Cypress-Selenium"
+console.log(arr.join(""));      // "PlaywrightCypressSelenium"
+```
+
+#### `toString()` — Array → Comma-Separated String
+
+```js
+let arr = [1, 2, 3];
+console.log(arr.toString());    // "1,2,3"
+```
+
+> 💡 `toString()` is like `join()` with no arguments. Use `join()` for custom separators.
+
+#### `split()` — String → Array (String method, not Array method!)
+
+```js
+let str = "Chrome,Firefox,Edge";
+let arr = str.split(",");
+console.log(arr);   // ["Chrome", "Firefox", "Edge"]
+```
+
+```
+join() and split() are inverses:
+Array  ──join(",")──→  String
+String ──split(",")──→ Array
+```
+
+---
+
+### 🔧 8.6 Other Utility Methods
+
+#### `concat()` — Merge Arrays
+
+```js
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+let arr3 = [5, 6];
+
+let merged = arr1.concat(arr2, arr3);
+console.log(merged);   // [1, 2, 3, 4, 5, 6]
+console.log(arr1);     // [1, 2]  ← unchanged!
+```
+
+#### Spread Operator `...` — Modern Alternative to concat
+
+```js
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+
+let merged = [...arr1, ...arr2];
+console.log(merged);   // [1, 2, 3, 4]
+```
+
+#### `slice()` — Extract a Portion (Non-Mutating Copy)
+
+```js
+let arr = [10, 20, 30, 40, 50];
+
+console.log(arr.slice(1, 3));    // [20, 30]      (from index 1 to 3, exclusive)
+console.log(arr.slice(2));       // [30, 40, 50]  (from index 2 to end)
+console.log(arr.slice(-2));      // [40, 50]      (last 2 elements)
+console.log(arr.slice());        // [10, 20, 30, 40, 50]  (shallow copy)
+console.log(arr);                // [10, 20, 30, 40, 50]  ← unchanged!
+```
 
 ### `slice()` vs `splice()` — Don't Confuse Them!
 
@@ -406,6 +808,69 @@ let spliced = arr.splice(1, 2);
 console.log(spliced); // [20, 30]
 console.log(arr);     // [10, 40, 50]  ← modified!
 ```
+
+#### `fill()` — Fill with a Value (Mutates!)
+
+```js
+let arr = [1, 2, 3, 4, 5];
+
+arr.fill(0);
+console.log(arr);   // [0, 0, 0, 0, 0]
+
+let arr2 = [1, 2, 3, 4, 5];
+arr2.fill(9, 1, 3);           // fill 9 from index 1 to 3 (exclusive)
+console.log(arr2);  // [1, 9, 9, 4, 5]
+```
+
+#### `Array.isArray()` — Check If Value Is an Array
+
+```js
+console.log(Array.isArray([1, 2, 3]));     // true
+console.log(Array.isArray("hello"));       // false
+console.log(Array.isArray({ length: 3 })); // false
+```
+
+> 💡 Don't use `typeof` for arrays — `typeof []` returns `"object"`. Use `Array.isArray()` instead.
+
+#### `keys()`, `values()`, `entries()` — Array Iterators
+
+```js
+let browsers = ["Chrome", "Firefox", "Edge"];
+
+// keys() — returns indices
+for (let key of browsers.keys()) {
+    console.log(key);     // 0, 1, 2
+}
+
+// values() — returns values
+for (let val of browsers.values()) {
+    console.log(val);     // "Chrome", "Firefox", "Edge"
+}
+
+// entries() — returns [index, value] pairs
+for (let [index, val] of browsers.entries()) {
+    console.log(`${index}: ${val}`);   // "0: Chrome", "1: Firefox", "2: Edge"
+}
+```
+
+---
+
+### 🧠 8.7 Method Categories — Mutating vs Non-Mutating
+
+```
+✅ MUTATING (changes original):        ❌ NON-MUTATING (returns new):
+┌────────────────────────────┐        ┌────────────────────────────┐
+│ push()     pop()           │        │ slice()    concat()        │
+│ unshift()  shift()         │        │ map()      filter()        │
+│ splice()   sort()          │        │ reduce()   find()          │
+│ reverse()  fill()          │        │ flat()     flatMap()       │
+│ copyWithin()               │        │ includes() indexOf()      │
+│                            │        │ join()     every() some() │
+│                            │        │ toSorted() toReversed()   │
+└────────────────────────────┘        └────────────────────────────┘
+```
+
+> 💡 **Rule of thumb:** If a method **returns a new array**, it's non-mutating. If it **returns the modified array itself** or a removed element, it's mutating.
 
 ---
 
