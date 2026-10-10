@@ -17,6 +17,8 @@ Playwright_3x/
 ├── Chapter_07_SwitchStatements/    # Switch statements, grouping, API testing with switch
 ├── Chapter_08_Userinputs/          # Reading user input in Node.js
 ├── Chapter_09_Loops/               # Loops — for, while, do-while, edge cases
+├── Chapter_10_Array/               # Arrays — creation, methods, transform, sort, slice, destructuring
+├── Chapter_11_Functions/           # Functions — types, arrow, spread, return, template literals
 ├── ChearSheet/                     # Quick-reference cheat sheets
 ├── Interview_concepts/             # Interview preparation material
 └── IQ_Notes/                       # Detailed concept notes (markdown)
@@ -37,6 +39,8 @@ Playwright_3x/
 | 07 | **Switch Statements** | `switch/case`, grouped cases, API testing with switch, IQ practice questions |
 | 08 | **User Inputs** | Reading user input from stdin using `readFileSync`, `trim()`, EOF signals |
 | 09 | **Loops** | `for` loop (ICU pattern), `while` loop, `do-while` loop, pre/post increment, `break`, infinite loops, NaN edge cases, accumulator pattern |
+| 10 | **Arrays** | Array creation, access & modify, push/pop/shift/unshift, searching (`indexOf`, `includes`), transform (`map`, `filter`, `reduce`), sorting, slicing, concat, spread operator, `Array.isArray`, `every`/`some`, copying, destructuring |
+| 11 | **Functions** | Function basics, 4 types (no return/no arg, no return/with arg, with return/no arg, with return/with arg), template literals in functions, function expressions, arrow functions, spread/rest parameters, return values |
 
 ---
 
@@ -52,8 +56,10 @@ Quick-reference notes with tables, examples, and diagrams — perfect for revisi
 | [04_Literals_notes.md](IQ_Notes/04_Literals_notes.md) | JavaScript Literals — Null vs Undefined, Data Types |
 | [05_Operaters_notes.md](IQ_Notes/05_Operaters_notes.md) | JavaScript Operators — Complete Reference |
 | [06_Statements_notes.md](IQ_Notes/06_Statements_notes.md) | JavaScript Statements — if/else, Nested Conditions, Truthy/Falsy |
-| [07_Userinputs_notes.md](IQ_Notes/07_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
+| [07_switchstatement_notes.md](IQ_Notes/07_switchstatement_notes.md) | JavaScript Switch Statements — switch/case, grouped cases, API testing |
+| [08_Userinputs_notes.md](IQ_Notes/08_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
 | [09_Loops_notes.md](IQ_Notes/09_Loops_notes.md) | JavaScript Loops — for, while, do-while, edge cases, interview questions |
+| [10_Array_notes.md](IQ_Notes/10_Array_notes.md) | JavaScript Arrays — creation, methods, transform, sort, slice, destructuring |
 | [Source_code_Byte_code_Binary_IQ.md](IQ_Notes/Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 
 ---

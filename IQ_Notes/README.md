@@ -60,3 +60,8 @@ Use this structure when adding a new note (see `Source_code_Byte_code_Binary_IQ.
 | [03_commands_notes.md](03_commands_notes.md) | VS Code Commands & Shortcuts — Complete Reference (Windows) |
 | [04_Literals_notes.md](04_Literals_notes.md) | JavaScript Literals — Complete Reference (Null vs Undefined, Data Types) |
 | [05_Operaters_notes.md](05_Operaters_notes.md) | JavaScript Operators — Complete Reference (Assignment, Arithmetic, Comparison, Logical) |
+| [06_Statements_notes.md](06_Statements_notes.md) | JavaScript Statements — if/else, Nested Conditions, Truthy/Falsy |
+| [07_switchstatement_notes.md](07_switchstatement_notes.md) | JavaScript Switch Statements — switch/case, grouped cases, API testing |
+| [08_Userinputs_notes.md](08_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
+| [09_Loops_notes.md](09_Loops_notes.md) | JavaScript Loops — for, while, do-while, edge cases, interview questions |
+| [10_Array_notes.md](10_Array_notes.md) | JavaScript Arrays — creation, methods, transform, sort, slice, destructuring |
