@@ -60,6 +60,7 @@ Quick-reference notes with tables, examples, and diagrams — perfect for revisi
 | [08_Userinputs_notes.md](IQ_Notes/08_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
 | [09_Loops_notes.md](IQ_Notes/09_Loops_notes.md) | JavaScript Loops — for, while, do-while, edge cases, interview questions |
 | [10_Array_notes.md](IQ_Notes/10_Array_notes.md) | JavaScript Arrays — creation, methods, transform, sort, slice, destructuring |
+| [11_Functions_notes.md](IQ_Notes/11_Functions_notes.md) | JavaScript Functions — types, arrow functions, spread/rest, var/let/const, hoisting |
 | [Source_code_Byte_code_Binary_IQ.md](IQ_Notes/Source_code_Byte_code_Binary_IQ.md) | Source Code vs Bytecode vs Binary Code |
 
 ---

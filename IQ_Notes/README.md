@@ -65,3 +65,4 @@ Use this structure when adding a new note (see `Source_code_Byte_code_Binary_IQ.
 | [08_Userinputs_notes.md](08_Userinputs_notes.md) | JavaScript User Inputs — readFileSync, stdin, EOF, readline |
 | [09_Loops_notes.md](09_Loops_notes.md) | JavaScript Loops — for, while, do-while, edge cases, interview questions |
 | [10_Array_notes.md](10_Array_notes.md) | JavaScript Arrays — creation, methods, transform, sort, slice, destructuring |
+| [11_Functions_notes.md](11_Functions_notes.md) | JavaScript Functions — types, arrow functions, spread/rest, var/let/const, hoisting |
